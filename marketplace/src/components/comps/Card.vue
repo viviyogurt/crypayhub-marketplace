@@ -1,48 +1,65 @@
 <template>
-     <MDBCard>
+     <MDBCard style="width: 18rem">
         <MDBCardImg
-          src="https://mdbcdn.b-cdn.net/img/new/fluid/nature/010.webp"
+          :src="background_src"
           top
           alt="..."
         />
           <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>The Starry Night</MDBCardTitle>
             <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+              The Starry Night is an oil-on-canvas painting.
             </MDBCardText>
-            <MDBBtn outline="danger" floating>
-                <MDBIcon icon="heart"></MDBIcon>
-            </MDBBtn>
+            <MDBListGroup flush>
+                <MDBListGroupItem>
+                  <MDBIcon size="xs" icon="user" > Vincent van Gogh</MDBIcon>
+                </MDBListGroupItem>
+                <MDBListGroupItem>
+                  <MDBIcon size="xs" icon="heart" > 60 Rarify Token</MDBIcon>
+                </MDBListGroupItem>
+            </MDBListGroup>
+          <MDBCardBody>
+            <MDBCardLink href='#' class="text-reset"> Explore More </MDBCardLink>
+          </MDBCardBody>
           </MDBCardBody>
       </MDBCard>
 </template>
 
 <script>
 import { 
-    MDBBtn,
     MDBCard, 
     MDBCardBody, 
     MDBCardTitle, 
     MDBCardText, 
     MDBCardImg,
-    MDBIcon
+    MDBIcon,
+    MDBListGroup,
+    MDBListGroupItem,
+    MDBCardLink
  } from "mdb-vue-ui-kit";
+ import background from "/src/assets/background.jpeg";
 
 export default {
   name: "Card",
   components: {
-    MDBBtn,
     MDBCard, 
     MDBCardBody, 
     MDBCardTitle, 
     MDBCardText, 
     MDBCardImg,
-    MDBIcon
+    MDBIcon,
+    MDBListGroup,
+    MDBListGroupItem,
+    MDBCardLink
   },
   props: {
     msg: String,
   },
+  data() {
+    return {
+    background_src: background
+    };
+}
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -2,8 +2,8 @@
   <MDBContainer >
     <div d-flex flex-column mb-3>
       <div class="p-2">
-            <MDBNavbar expand="lg" bg="light" container>
-              <MDBNavbarBrand href="#" class="text-reset">Crypayhub  ·  MarketPlace
+            <MDBNavbar expand="lg" light bg="light" container>
+              <MDBNavbarBrand href="#" class="text-reset home">R a r i f y
               </MDBNavbarBrand>
               <MDBNavbarToggler
               @click="collapse1 =! collapse1"
@@ -11,13 +11,13 @@
               </MDBNavbarToggler>
               <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
                 <MDBNavbarNav class="mb-2 mb-lg-0">
-                  <MDBNavbarItem to="#Explore" >
+                  <MDBNavbarItem active to="#Explore" >
                     Explore
                   </MDBNavbarItem>
                   <MDBNavbarItem to="#Resources" >
                     Resources
                   </MDBNavbarItem>
-                  <MDBNavbarItem to="#Create" >
+                  <MDBNavbarItem  to="#Create" >
                   Create
                   </MDBNavbarItem>
                 </MDBNavbarNav>
@@ -37,9 +37,9 @@
       </div>
       <div class="p-2">
         <div
-          class="bg-image p-4 d-flex align-items-center justify-content-centerd-flex flex-column mb-3 "
+          class="mask-custom bg-image p-4 d-flex align-items-center justify-content-centerd-flex flex-column mb-3 "
           style="
-            background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/010.webp');
+            background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/city/055.webp');
             height: 50vh;
             width: 85%;
             margin-top: 2.5rem;
@@ -51,9 +51,10 @@
         <div class="top-container ">
           <div class="mask gradient-custom">
             <div class="d-flex  align-items-center h-100">
-              <h1 class="mb-3 h2">Trade NFT using Crypay Token</h1>
+              <h1 class="mb-3 h2">Trade NFT using Rarify Token</h1>
             
             </div>
+            
           </div>
         </div>
         <!-- <div class="d-flex align-items-center justify-content-start">
@@ -138,6 +139,8 @@ export default {
 .gradient-custom {
     /* fallback for old browsers */
     background: #a18cd1;
+    backdrop-filter: contrast(110%) brightness(110%) saturate(100%) sepia(30%) hue-rotate(0deg) grayscale(100%) invert(0%) blur(0px);
+  
 
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(
@@ -162,14 +165,17 @@ export default {
   --totalWidth: 200px;
   align-items: center;
 }
-.text-reset {
-  color: 'light';
-}
+
 .half {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-
+.mask-custom {
+  backdrop-filter: contrast(110%) brightness(110%) saturate(100%) sepia(30%) hue-rotate(0deg) grayscale(100%) invert(0%) blur(0px);
+  mix-blend-mode: normal;
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+}
 
 </style>
 
