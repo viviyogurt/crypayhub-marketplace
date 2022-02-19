@@ -1,15 +1,23 @@
 <template>
-  <explore/>
+  <MDBContainer>
+    <h1 class="mt-5">Explorer NFTs</h1>
+    <Display class="mt-2"></Display>
+  </MDBContainer>
 </template>
 
 <script>
-// @ is an alias to /src
-import explore from "@/components/explore.vue";
+import { MDBContainer } from 'mdb-vue-ui-kit';
+import Display from "../components/Explore/Display";
 
 export default {
   name: "Explore",
   components: {
-    explore
-  }
+    MDBContainer,
+    Display
+  },
 };
 </script>
+
+<style lang="scss">
+
+</style>
